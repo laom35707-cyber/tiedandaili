@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123123</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px; /* 扩大容器宽度，以便高清大图展示 */
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+        }
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.2s, transform 0.1s;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        .btn-apk {
+            background-color: #2ecc71;
+        }
+        .btn-apk:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+        .btn-yaml {
+            background-color: #3498db;
+        }
+        .btn-yaml:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        /* 图片流高清无缝拼接样式 */
+        .image-stream {
+            width: 100%;
+            max-width: 800px; /* 与上方按钮对齐，支持更高分辨率的图片显示 */
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: block;
+        }
+        .image-stream img {
+            width: 100%;
+            height: auto;
+            display: block; /* 消除行内流产生的底部白边/空隙 */
+            margin: 0;
+            padding: 0;
+            border: none;
+            
+            /* 高清显示优化：防止缩放导致图片模糊 */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated; /* 针对部分高像素密度屏幕的清晰度提升 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="download-buttons">
+            <a href="FlClash.apk" download class="btn btn-apk">下载 FlClash.apk</a>
+            <a href="laoma.yaml" download class="btn btn-yaml">下载 laoma.yaml</a>
+        </div>
+    </div>
+
+    <div class="image-stream">
+        <img src="1.png" alt="1">
+        <img src="2.png" alt="2">
+        <img src="3.png" alt="3">
+        <img src="4.png" alt="4">
+        <img src="5.png" alt="5">
+        <img src="6.png" alt="6">
+    </div>
+</body>
+</html>
